@@ -31,7 +31,6 @@ function SmoothMarker({ position }) {
         const newLng = (prevPosition[1] + position[1]) / 2;
         if (Math.abs(newLat - position[0]) < 0.001 && Math.abs(newLng - position[1]) < 0.001) {
           clearInterval(interval);
-          return position;
         }
         return [newLat, newLng];
       });
